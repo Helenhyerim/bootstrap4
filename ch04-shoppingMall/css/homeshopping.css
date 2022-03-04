@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+#viewMore {
+	display: block;
+	width: 10%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	
+}
+
+#signUpNow {
+	font-size: 13pt;
+}
+

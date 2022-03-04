@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>쇼핑몰 회원가입 페이지</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+
+    <!-- Font Awesome 5 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- 직접 만든  CSS -->
+    <link rel="stylesheet" href="./css/homeshopping.css">
+</head>
+<body>
+   <div class="container pt-2">
+     
+     	  <!-- 상단 고정 내비게이션 시작 -->
+		<nav class="navbar navbar-expand-lg bg-light navbar-light fixed-top">
+		<a class="navbar-brand" href="#"><i class="fas fa-couch"></i></a>
+		  
+		  <!-- 디바이스 크기가 휴대폰 크기로 되었을 경우에 아코디언 같은 Navigation Bar 만들기 -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto"> <!-- .mr-auto 는 css 의  margin-right: auto; 임. 즉, 가로축 미사용 공간 너비를 우축 바깥 여백에 할당한다는 것임. -->
+            <li class="nav-item active">
+              <a class="nav-link h5" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link h5" href="signUp.html">Sign up</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle h5" href="#" id="navbarDropdown" data-toggle="dropdown">Menu</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="allShofas.html">All Sofas</a>
+                <a class="dropdown-item" href="reviews.html">Reviews</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">My Page</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0"> <!-- .form-inline 이것은 너비가 최소 576px인 뷰포트 내의 양식에만 적용됩니다. 576px보다 작은 화면에서는 세로방향으로 쌓입니다. -->
+            <div class="form-group" style="margin-right: 10px;">
+	            <input class="form-control mr-sm-2" type="text" placeholder="Email">
+            </div>
+            
+            <div class="form-group">
+	            <input class="form-control mr-sm-2" type="password" placeholder="Password">
+            </div>
+            <button class="btn btn-outline-primary" type="submit" href="signIn.html">Sign in</button>
+          </form>
+        </div>
+		</nav>
+		<!-- 상단 고정 내비게이션    끝 -->
+     
+     <!-- 상단 고정 Carousel 시작 -->
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+		  <ol class="carousel-indicators">
+		    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+		    
+		  </ol>
+		  <div class="carousel-inner mb-5">
+		    <div class="carousel-item active">
+		      <img src="./images/top.png" class="d-block w-100" alt="..."> <!-- d-block 은 display: block; 이고  w-100 은 width 의 크기는 <div class="carousel-item active">의 width 100% 로 잡으라는 것이다. -->
+		      <div class="carousel-caption d-none d-md-block"> <!-- d-none 은 display : none; 이므로 화면에 보이지 않다가, d-md-block 이므로 d-md-block 은 width 가 768px이상인 것에서만 display: block; 으로 보여라는 말이다.  --> 
+			    <h5>Welcome</h5>
+			  </div>
+		    </div>
+		    
+		  </div>
+		  
+		</div>
+		<!-- 상단 고정 Carousel 끝 -->
+     
+     
+     <!-- 중앙 컨텐츠 시작 -->
+     <div class="row" style="margin: 20px 0 50px 0;">
+        <div class="col-md-3"> 
+         	<ul class="nav flex-column">
+			  <li class="nav-item">
+			    <a class="nav-link" href="login.html">로그인</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" href="#">아이디찾기</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" href="#">비밀번호찾기</a>
+			  </li>
+			</ul>
+         </div>
+         <div class="col-md-9">
+			 <!-- 회원가입 폼 시작 -->
+			 <form action="register.do" method="post">
+				<fieldset>
+				    <legend>회원 가입</legend>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-3">
+								<label for="email">아이디</label>
+							</div>
+							<div class="col-md-9">
+								<input class="form-control" type="email" id="email"	name="email" placeholder="이메일을 입력하세요" autocomplete="off" required /> 
+							</div>
+						</div>
+					</div>	
+					<div class="form-group">
+						<div class="row">	
+							<div class="col-md-3">
+								<label for="pwd">비밀번호</label>
+							</div>
+							<div class="col-md-9">
+								<input class="form-control" type="password" id="pwd" name="pwd"	placeholder="6~12자 사이로 입력" required />
+							</div>
+						</div>	
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-3">
+								<label for="name">이름</label>
+							</div>
+							<div class="col-md-9">
+								<input class="form-control" type="text" id="name" name="name" autocomplete="off" required />
+							</div>
+						</div>	
+					</div>
+					<div class="form-group">
+					    <div class="row">
+							<div class="col-md-3">
+								<label for="tel">휴대폰</label>
+							</div>
+							<div class="col-md-9">
+								<input class="form-control" type="tel" id="tel" name="tel" />
+							</div>
+						</div>	
+					</div>
+					<div class="form-group custom-submit">
+						<input class="btn btn-success" type="submit" value="전송">
+					</div>
+				</fieldset>
+			 </form>
+			 <!-- 회원가입 폼 끝 -->
+			 
+         </div>
+     </div>
+     <!-- 중앙 컨텐츠 끝 -->
+      
+     <hr>
+     
+     <!-- 푸터 시작 -->
+     <div id="footer">
+     	<p class="text-center">&copy; Company 2022 </p>
+     </div>
+     <!-- 푸터 끝  -->
+     
+   </div> 
+
+    <!-- Optional JavaScript -->
+    <script src="../js/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+</body>
+</html>
